@@ -5,9 +5,19 @@
   "description": "Auto apply on profesia.sk from the current tab to the right.",
   "permissions": ["tabs", "scripting", "storage"],
   "host_permissions": ["https://*.profesia.sk/*", "https://profesia.sk/*"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Profesia Auto Apply"
+    "default_title": "Profesia Auto Apply",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
   },
   "background": {
     "service_worker": "background.js"
