@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Profesia Auto Apply",
+  "version": "2.2.0",
+  "description": "Auto apply on profesia.sk from the current tab to the right.",
+  "permissions": ["tabs", "scripting", "storage"],
+  "host_permissions": ["https://*.profesia.sk/*", "https://profesia.sk/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Profesia Auto Apply"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.profesia.sk/*", "https://profesia.sk/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

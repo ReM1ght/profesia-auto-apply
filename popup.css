@@ -1,0 +1,152 @@
+:root {
+  --bg: #161718;
+  --panel: #1e1f21;
+  --panel-2: #252628;
+  --stroke: rgba(255, 255, 255, 0.08);
+  --text: #e6e6e6;
+  --muted: #8d8f92;
+  --good: #9aa3a0;
+  --warn: #c4b08a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  width: 340px;
+  color: var(--text);
+  font: 13px/1.4 "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+}
+
+.app { padding: 14px; }
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #3a3c3f, #2a2c2e);
+  border: 1px solid var(--stroke);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+h1 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+}
+
+header p {
+  margin: 1px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.pill {
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: var(--panel);
+}
+.pill.run { color: #cfd3d1; }
+.pill.idle { color: var(--muted); }
+.pill.warn { color: var(--warn); }
+
+.glass {
+  background: var(--panel);
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px 6px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.stats b {
+  display: block;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+}
+
+.stats span {
+  color: var(--muted);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+button {
+  flex: 1;
+  height: 38px;
+  border: 1px solid var(--stroke);
+  border-radius: 10px;
+  font-weight: 650;
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+#start {
+  background: #3a3c3f;
+}
+
+#stop {
+  background: var(--panel-2);
+}
+
+button:active { transform: translateY(1px); }
+
+.logs { padding: 10px 10px 8px; }
+
+.logs-head {
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.log-body {
+  max-height: 168px;
+  overflow: auto;
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #c8c9cb;
+  white-space: pre-wrap;
+}
+
+.log-body::-webkit-scrollbar { width: 6px; }
+.log-body::-webkit-scrollbar-thumb {
+  background: #3a3c3f;
+  border-radius: 99px;
+}
