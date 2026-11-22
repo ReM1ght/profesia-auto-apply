@@ -2,10 +2,6 @@
 
 Chrome extension for navigating job applications on `profesia.sk` and completing supported application steps.
 
-## Overview
-
-A Chrome MV3 extension for working through saved job tabs on `profesia.sk`.
-
 ## Features
 
 - Processes open tabs from left to right
